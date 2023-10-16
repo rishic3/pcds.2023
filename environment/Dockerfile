@@ -66,6 +66,8 @@ RUN conda install -c conda-forge openjdk && \
     python install.py --sys-prefix && \
     rm install.py ijava-1.3.0.zip 
 
+RUN conda install -c conda-forge openjdk=11
+
 # Would prefer to install with conda, but doesn't work now
 RUN pip install pyspark ray
 
